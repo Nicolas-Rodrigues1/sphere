@@ -23,7 +23,7 @@ export default function Home() {
         <h1 className="text-4xl font-extrabold uppercase">Sphere</h1>
 
         <Tabs defaultValue="entrar">
-          <TabsList>
+          <TabsList className="flex justify-center">
             <TabsTrigger value="entrar">entrar</TabsTrigger>
             <TabsTrigger value="registrar">registrar</TabsTrigger>
           </TabsList>
@@ -36,10 +36,19 @@ export default function Home() {
               <Input id="senha" type="password" />
               <Button type="submit">entrar</Button>
             </form>
-          </TabsContent>
-          
+          </TabsContent>       
           <TabsContent value="registrar">
-            <p>criar conta</p>
+          <form action="" className="space-y-2">
+              <Label htmlFor="nome">nome</Label>
+              <Input id="nome" />
+              <Label htmlFor="bio">bio</Label>
+              <Input id="bio" />
+              <Label htmlFor="email">email</Label>
+              <Input id="email" />
+              <Label htmlFor="senha">senha</Label>
+              <Input id="senha" type="password" />
+              <Button type="submit">criar conta</Button>
+            </form>
           </TabsContent>
         
         </Tabs>
